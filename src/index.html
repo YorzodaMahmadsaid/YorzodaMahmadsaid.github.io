@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Webpixels">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>Quick – Website</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/png"><!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Quick CSS -->
+    <link rel="stylesheet" href="assets/css/quick-website.css" id="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <style>
+
+        @keyframes hidePreloader {
+                    0% {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    100% {
+                        width: 0;
+                        height: 0;
+                    }
+        }
+
+        body>div.preloader {
+            position: fixed;
+            background: white;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .2s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:not(.loaded)>div.preloader {
+            opacity: .8;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded>div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+
+        .navbar {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translate3d(0,50px,0)
+            }
+
+            to {
+                transform: translate3d(0,0,0);
+                opacity: 1
+            } 
+        }
+
+        body {
+            height: 100%;
+            background-image: url(../img/bg.svg);
+            background-size:100% 100%;
+            -o-background-size: 100% 100%;
+            -webkit-background-size: 100% 100%;
+            background-size:cover;
+        }
+    </style>
+</head>
+
+<body id="myNavbar">
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <img alt="Image placeholder" src="assets/img/brand/icon-logo.svg" id="navbar-logo">
+            </a>
+            <p class="h4" style="margin-bottom: 0;">Смарт Анбор</p>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" >
+                <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#section1">Главная</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#section2">Как это работает</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#section3">Видео пример</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#section5">Возможности системы</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#section6">Связаться с нами</a>
+                    </li>
+                </ul>
+                <!-- Mobile button -->
+                <div class="d-lg-none text-center">
+                    <a href="https://webpixels.io/themes/quick-website-ui-kit" class="btn btn-block btn-sm btn-warning">See more details</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main content -->
+    <section style="height: 90vh; padding-top: 150px;" id="section1">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
+                    <!-- Image -->
+                    <figure class="w-100 headline1">
+                        <img alt="Image placeholder" src="assets/img/svg/illustrations/illustrations_1.svg" class="img-fluid mw-md-120">
+                    </figure>
+                </div>
+                <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5">
+                    <!-- Heading -->
+                    <h1 class="display-5 text-center text-md-left mb-3 headline2">
+                        <strong class="text-primary">Смарт Анбор</strong> пришло время упростить ваш бизнес
+                    </h1>
+                    <!-- Text -->
+                    <p class="lead text-center text-md-left text-muted headline2">
+                        Распределёная система складского учёта и торговли для реализации товаров. Обеспечивает непреривную работу множества складов в рамках одной управляемой эко-системы.
+                    </p>
+                    <!-- Buttons -->
+                    <div class="text-center text-md-left mt-5w headline2">
+                        <a href="#section6" class="btn btn-primary btn-icon">
+                            <span class="btn-inner--text">Запросить пробную версию</span>
+                            <span class="btn-inner--icon"><i data-feather="chevron-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice slice-lg pt-lg-6 pb-0 pb-lg-6 bg-section-secondary" id="section2">
+        <div class="container">
+            <!-- Title -->
+            <!-- Section title -->
+            <div class="row mb-5 justify-content-center text-center headline2">
+                <div class="col-lg-6">
+                    <h2 class=" mt-4">Как это работает?</h2>
+                </div>
+            </div>
+            <!-- Card -->
+            <div class="row mt-5">
+                <div class="col-md-4 headline2">
+                    <div class="card">
+                        <div class="card-body pb-5">
+                            <div class="pt-4 pb-5">
+                                <img src="assets/img/svg/illustrations/illustration-5.svg" class="img-fluid img-center" style="height: 150px;" alt="Illustration" />
+                            </div>
+                            <h5 class="h4 lh-130 mb-3 text-center">Выберите тариф</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 headline3">
+                    <div class="card">
+                        <div class="card-body pb-5">
+                            <div class="pt-4 pb-5">
+                                <img src="assets/img/svg/illustrations/illustration-6.svg" class="img-fluid img-center" style="height: 150px;" alt="Illustration" />
+                            </div>
+                            <h5 class="h4 lh-130 mb-3 text-center">Получите доступ</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 headline4">
+                    <div class="card">
+                        <div class="card-body pb-5">
+                            <div class="pt-4 pb-5">
+                                <img src="assets/img/svg/illustrations/illustration-7.svg" class="img-fluid img-center" style="height: 150px;" alt="Illustration" />
+                            </div>
+                            <h5 class="h4 lh-130 mb-3 text-center">Начните работать</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice slice-lg" id="section3">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="pb-3 headline1">Наглядный видео пример</h2>
+            </div>
+            <div>
+                <div class="row row-grid justify-content-between align-items-center">
+                    <div class="col-lg-12 headline1">
+                        <div class="card mb-0">
+                            <div class="card-body p-2">
+                                <iframe width="100%" height="700" src="https://www.youtube.com/embed/xFa2_PVMeDQ" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice slice-lg bg-section-dark pt-5 pt-lg-8" id="section5">
+        <!-- SVG separator -->
+        <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
+            <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class="">
+                <polygon points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+        <!-- Container -->
+        <div class="container position-relative zindex-100">
+            <div class="col">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 text-center">
+                        <div class="mt-4 mb-6 headline2">
+                            <h2 class="h1 text-white">
+                                Возможности Смарт Анбора
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice pt-0 bg-primary">
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-xl-4 col-sm-6 card1">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div class="icon icon-shape rounded-circle bg-info text-white mr-4">
+                                <i data-feather="check"></i>
+                            </div>
+                            <span class="h6 w-75">Работа с поставщиками  и клиентами</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 card2">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div class="icon icon-shape rounded-circle bg-warning text-white mr-4">
+                                <i data-feather="check"></i>
+                            </div>
+                            <span class="h6 w-75">Автоматическая генерация накладных</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 card3">
+                    <div class="card shadow-none">
+                        <div>
+                            <div class="p-3 d-flex">
+                                <div class="icon icon-shape rounded-circle bg-primary text-white mr-4">
+                                    <i data-feather="check"></i>
+                                </div>
+                                <span class="h6 w-50">Приход и расход материалов</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 card4">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div class="icon icon-shape rounded-circle bg-info text-white mr-4">
+                                    <i data-feather="check"></i>
+                                </div>
+                                <span class="h6">Просмотр аналитики</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 card5">
+                    <div class="card shadow-none">
+                        <div>
+                            <div class="p-3 d-flex">
+                                <div class="icon icon-shape rounded-circle bg-warning text-white mr-4">
+                                    <i data-feather="check"></i>
+                                </div>
+                                <span class="h6">Создание операции и сделки</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 card6">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div class="icon icon-shape rounded-circle bg-primary text-white mr-4">
+                                    <i data-feather="check"></i>
+                                </div>
+                                <span class="h6">Прочие расходы</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 card7">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div>
+                                    <div class="icon icon-shape rounded-circle bg-info text-white mr-4">
+                                        <i data-feather="check"></i>
+                                    </div>
+                                    <span class="h6">Всевозможные фильтр</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 card8">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div>
+                                    <div class="icon icon-shape rounded-circle bg-warning text-white mr-4">
+                                        <i data-feather="check"></i>
+                                    </div>
+                                    <span class="h6">Печать документов</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 card9">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div>
+                                    <div class="icon icon-shape rounded-circle bg-primary text-white mr-4">
+                                        <i data-feather="check"></i>
+                                    </div>
+                                    <span class="h6">Приход и расход денег</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 card10">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div>
+                                    <div class="icon icon-shape rounded-circle bg-info text-white mr-4">
+                                        <i data-feather="check"></i>
+                                    </div>
+                                    <span class="h6">Денежные транзакции</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 card11">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div>
+                                    <div class="icon icon-shape rounded-circle bg-warning text-white mr-4">
+                                        <i data-feather="check"></i>
+                                    </div>
+                                    <span class="h6">Динамическое управления</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 card12">
+                    <div class="card shadow-none">
+                        <div class="p-3 d-flex">
+                            <div>
+                                <div>
+                                    <div class="icon icon-shape rounded-circle bg-primary text-white mr-4">
+                                        <i data-feather="check"></i>
+                                    </div>
+                                    <span class="h6">Складской учет</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice slice-lg bg-section-secondary ">
+        <div class="container">
+            <div class="py-6">
+                <div class="row row-grid justify-content-between align-items-center field1">
+                    <div class="col-lg-5">
+                        <h5 class="h3">Смарт Анбор - доступен с любого устройства</h5>
+                        <p class="lead my-4">
+                            Создавайте сделки, покупайте, продовайте и управляйте.
+                        </p>
+                        <div class="d-flex">
+                            <img src="assets/img/brand/app-store.png" alt="ios" class="mr-3" style="cursor: pointer">
+                            <img src="assets/img/brand/android.png" alt="android" style="cursor: pointer">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img alt="Image placeholder" src="assets/img/theme/light/mobile-and-tablet.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="slice slice-lg border rounded" id="section6" >
+                <div class="container position-relative zindex-100 field1">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-6 text-center headline">
+                            <h3>Связаться с нами</h3>
+                            <p class="lh-190">Если мы можем вам чем-то помочь, просто сообщите нам. Мы будем рады предложить Вам свою помощь</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <!-- Form -->
+                            <form>
+                                <div class="form-group">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Ваше имя" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control form-control-lg" type="email" placeholder="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Номер телефона" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control form-control-lg" placeholder="Скажите нам несколько слов ..." rows="3" required></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <!-- <div class="g-recaptcha" data-sitekey="6Lfs5ScUAAAAANAJwGrdfvWLFRRiVbKRE2vfoaFj"></div> -->
+                                    <button type="reset" class="btn-reset d-none"></button>
+                                    <button type="submit" class="btn btn-block btn-lg btn-primary mt-4">Отправить сообщение</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="position-relative" id="footer-main">
+        <div class="footer pt-lg-7 footer-dark bg-dark">
+            <!-- SVG shape -->
+            <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
+                <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class=" fill-section-secondary">
+                    <polygon points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+            </div>
+            <!-- Footer -->
+            <div class="container pt-4">
+                <div class="row">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <!-- Theme's logo -->
+                        <div>
+                            <a href="index.html" class="d-flex">
+                                <img alt="Image placeholder" src="assets/img/brand/icon-logo.svg" width="40" height="40">   
+                                <p class="h4 ml-3" style="margin-bottom: 0;">Смарт Анбор</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="divider divider-fade divider-dark my-4">
+                <div class="row align-items-center justify-content-center pb-4 text-center">
+                    <div class="col-md-6">
+                        <div class="copyright text-sm font-weight-bold text-center">
+                            &copy; 2021 <a href="http://abad.tj" class="font-weight-bold" target="_blank">Abad Technologies</a>. Все права защищены
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Core JS  -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/svg-injector/dist/svg-injector.min.js"></script>
+    <script src="assets/libs/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Quick JS -->
+    <script src="assets/js/quick-website.js"></script>
+    <!-- Feather Icons -->
+    <script>
+
+        
+
+        feather.replace({
+            'width': '1em',
+            'height': '1em'
+        })
+
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.querySelector('body').classList.add('loaded');
+            }, 300);
+        });
+
+      $(document).ready(function(){
+        // Add scrollspy to <body>
+        $('body').scrollspy({target: ".navbar", offset: 50});   
+      
+        // Add smooth scrolling on all links inside the navbar
+        $("#myNavbar a").on('click', function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+      
+            // Store hash
+            var hash = this.hash;
+      
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+         
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          }  // End if
+        });
+      });
+        ScrollReveal().reveal('.headline1', {origin: 'right', distance: '300px', duration: 2000, reset: true, desktop: true});
+        ScrollReveal().reveal('.headline2', { origin: 'bottom', distance: '300px', duration: 1000, reset: true, desktop: true});
+        ScrollReveal().reveal('.headline3', { origin: 'bottom', distance: '300px', duration: 1500, reset: true, desktop: true});
+        ScrollReveal().reveal('.headline4', { origin: 'bottom', distance: '300px', duration: 2000, reset: true, desktop: true});
+
+        ScrollReveal().reveal('.card1', { origin: 'right', distance: '300px', duration: 500, reset: true, desktop: true});
+        ScrollReveal().reveal('.card2', { origin: 'right', distance: '300px', duration: 600, reset: true, desktop: true});
+        ScrollReveal().reveal('.card3', { origin: 'right', distance: '300px', duration: 700, reset: true, desktop: true});
+        ScrollReveal().reveal('.card4', { origin: 'right', distance: '300px', duration: 800, reset: true, desktop: true});
+        ScrollReveal().reveal('.card5', { origin: 'right', distance: '300px', duration: 900, reset: true, desktop: true});
+        ScrollReveal().reveal('.card6', { origin: 'right', distance: '300px', duration: 1000, reset: true, desktop: true});
+        ScrollReveal().reveal('.card7', { origin: 'right', distance: '300px', duration: 1100, reset: true, desktop: true});
+        ScrollReveal().reveal('.card8', { origin: 'right', distance: '300px', duration: 1200, reset: true, desktop: true});
+        ScrollReveal().reveal('.card9', { origin: 'right', distance: '300px', duration: 1300, reset: true, desktop: true});
+        ScrollReveal().reveal('.card10', { origin: 'right', distance: '300px', duration: 1400, reset: true, desktop: true});
+        ScrollReveal().reveal('.card11', { origin: 'right', distance: '300px', duration: 1500, reset: true, desktop: true});
+        ScrollReveal().reveal('.card12', { origin: 'right', distance: '300px', duration: 1600, reset: true, desktop: true});
+
+        ScrollReveal().reveal('.field1', { duration: 1500, reset: true, desktop: true});
+    </script>
+</body>
+
+</html>
